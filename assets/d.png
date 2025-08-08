@@ -1,0 +1,189 @@
+%%%%
+% MTecknology's Resume
+%%%%
+% Author: Michael Lustfield
+% License: CC-BY-4
+%%%%
+
+\documentclass[letterpaper,10pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% BEGIN_FILE: mteck.sty
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+\usepackage{xcolor}
+
+\definecolor{accentTitle}{HTML}{0e6e55}
+\definecolor{accentText}{HTML}{0e6e55}
+\definecolor{accentLine}{HTML}{a16f0b}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{10pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    \footnotesize{#2}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+  \end{center}
+}
+
+\newcommand{\documentFooter}[1]{
+  \setlength{\footskip}{10.25pt}
+  \fancyfoot[C]{\footnotesize #1}
+}
+
+\newcommand{\numberedPages}{
+  \documentFooter{\thepage/\pageref{LastPage}}
+}
+
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+
+\newcommand{\heading}[2]{
+  \hspace{10pt}#1\hfill#2\\
+}
+
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=30pt]
+}{
+  \end{itemize}
+}
+
+\newcommand{\itemTitle}[1]{
+  \item[] \underline{#1}\vspace{4pt}
+}
+
+\renewcommand\labelitemi{--}
+
+%% END_FILE: mteck.sty
+%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+  %---------%
+  % Heading %
+  %---------%
+
+\documentTitle{NIPUN GUPTA}{
+  \href{tel:9075850416}{
+    \raisebox{-0.05\height} \faPhone~9075850416} ~ | ~
+  \href{mailto:nipun0411@gmail.com}{
+    \raisebox{-0.15\height} \faEnvelope~nipun0411@gmail.com} ~ | ~
+  \href{https://www.linkedin.com/in/nipun-gupta-3626b2336/}{
+    \raisebox{-0.15\height} \faLinkedin~LinkedIn} ~ | ~
+  \href{https://github.com/NeRd-StEyN}{
+    \raisebox{-0.15\height} \faGithub~GitHub}
+}
+
+  %---------%
+  % Summary %
+  %---------%
+
+\tinysection{Summary}
+Full-stack developer proficient in building responsive web apps and cross-platform mobile applications using React, React Native, Node.js, and MongoDB. Passionate about crafting seamless user experiences with scalable, efficient code.
+
+
+  \section{Education}
+
+\headingBf{JAYPEE INSTITUTE OF INFORMATION TECHNOLOGY, NOIDA}{}
+\headingIt{Bachelor of Technology (Computer Science and Engineering), CGPA: 9.0/10}{}
+
+\vspace{5pt}
+
+\headingBf{Maria Assumpta Convent School, Kashipur}{}
+\headingIt{Higher Secondary Education}{}
+\headingIt{Major in: Physics, Chemistry, Mathematics | Percentage: 96.4\%}{}
+
+
+
+  %--------%
+  % Skills %
+  %--------%
+
+\section*{Skills}
+
+\textbf{Technical Skills:} C, C++, JavaScript, HTML, CSS, React.js, Node.js, Express.js, MongoDB, MySQL, REST APIs, React Native, Firebase,Gemini API \\
+
+
+\textbf{Tools and Platforms:} Git, Github, VS Code, Vercel, Render, Android Studio\\
+\textbf{CS Fundamentals:} Data Structures and Algorithms, DBMS \\
+\textbf{Soft Skills:} Teamwork, Leadership, Communication, Resilience
+
+
+
+  \section{Projects}
+
+  \headingBf{Hospital / Health Science IRB}{Mar 2015 -- Present}
+  \begin{resume_list}
+    \item Served as non-scientific/unaffiliated patient-representative
+    \item Reviewed patient consent forms for completeness, accuracy, and clarity
+    \item Became familiar with industry standards and regulations (OHRP, HIPAA)
+  \end{resume_list}
+
+  \headingBf{Debian Linux}{Jan 2001 -- Present}
+  \begin{resume_list}
+    \item Maintained packages in Debian repositories
+    \item Reviewed and sponsored packages on behalf of prospective Developers
+    \item Resolved bugs reported in bug tracking system
+  \end{resume_list}
+
+
+  \section{Coding Profiles}
+  \headingBf{Solved 450+ DSA problems on Leetcode}{}
+  
+
+\end{document}
+s

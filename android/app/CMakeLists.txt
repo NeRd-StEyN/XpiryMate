@@ -1,0 +1,8 @@
+# Bypass path length checks
+set(CMAKE_OBJECT_PATH_MAX 400)
+set(CMAKE_OBJECT_PATH_MAX_LENGTH 400)
+file(REAL_PATH "${CMAKE_SOURCE_DIR}/.." PROJECT_ROOT)
+string(LENGTH "${PROJECT_ROOT}" PROJ_PATH_LENGTH)
+if(PROJ_PATH_LENGTH GREATER 100)
+    message(WARNING "Project path is too long (${PROJ_PATH_LENGTH} chars)")
+endif()

@@ -2,10 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+<key>NSCameraUsageDescription</key>
+<string>We need access to your camera to take photos of items</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>We need access to your photos to select item images</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+<false/>
 	<key>CFBundleDisplayName</key>
-	<string>RNproject</string>
+	<string>ExpiryMate</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
