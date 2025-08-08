@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const GEMINI_API_KEY = 'AIzaSyA29rmo77UMZzbtZh6KFax2GmSYcpCNi-8'; // replace with your actual API key
+const GEMINI_API_KEY = process.env.API_KEY; // replace with your actual API key
 const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + GEMINI_API_KEY;
 
 export const fetchGeminiTips = async () => {
